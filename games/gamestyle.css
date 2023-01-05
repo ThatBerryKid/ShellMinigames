@@ -1,0 +1,66 @@
+/* ----- Style options for the Mini Games themselves ----- */
+
+main .mgcontainer {
+  display: grid;
+  grid-template-areas:
+    "video title"
+    "video instructions"
+    "streamer player";
+  grid-template-columns: 2fr 1fr;
+}
+
+.item {
+  height: 300px;
+  padding: 20px 15px;
+}
+.video {
+  grid-area: video;
+  height: 600px;
+  height: 100%;
+}
+.title {
+  grid-area: title;
+  height: 100%;
+}
+.title h2 {
+  color: rgb(37);
+}
+p {
+  color: rgb(48);
+}
+.instructions {
+  grid-area: instructions;
+  padding: 15px;
+  height: 100%;
+}
+.streamer {
+  grid-area: streamer;
+}
+.player {
+  grid-area: player;
+}
+
+img {
+  pointer-events: none;
+}
+button {
+  height: 30px;
+}
+
+@media (max-width: 760px) {
+  main .mgcontainer {
+    display: grid;
+    grid-template-areas:
+      "title"
+      "instructions" "streamer" "player" "video";
+    grid-template-columns: 1fr;
+  }
+  .item {
+    flex-basis: 200px;
+  }
+}
+@media (min-width: 1000px) {
+  main .mgcontainer {
+    width: 980px;
+  }
+}

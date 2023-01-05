@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bunker Wars | Shell Mini Games</title>
+    <style>
+      body {
+        background: linear-gradient(#1c90b5, #50acca, #abe3f6, #abe3f6);
+      }
+      .BWanimation {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 100vw;
+        z-index: -2;
+        justify-content: center;
+        align-items: center;
+        animation: loadingBW 1400ms ease-in-out forwards, fadeOut 2s 3s forwards;
+        opacity: 100%;
+      }
+      @keyframes loadingBW {
+        0% {
+          gap: 100vw;
+        }
+        50% {
+          gap: 90vw;
+        }
+        100% {
+          gap: 0vw;
+        }
+      }
+      @keyframes fadeOut {
+        0% {
+          display: flex;
+        }
+        100% {
+          display: none;
+        }
+      }
+      img {
+        height: 100vw;
+      }
+      main {
+        margin: 0 auto;
+      }
+      a {
+        background-color: rgb(145, 42, 42);
+        border: 2px solid black;
+        color: white;
+        font-size: 25px;
+        text-decoration: none;
+        padding: 5px 10px;
+        border-radius: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="BWanimation">
+      <img
+        class="ima1"
+        src="bwimg/bweggRed.png"
+        alt="Red Eggs for Bunker Wars"
+      />
+      <img
+        class="ima2"
+        src="bwimg/bweggBlue.png"
+        alt="Blue Eggs for Bunker Wars"
+      />
+    </div>
+    <main>
+      <header>
+        <h1>Bunker Wars</h1>
+        <p>Welcome to the Bunker Wars page!</p>
+        <a href="../index.html">Go Back</a>
+      </header>
+      <section>
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/TFRB_Br5kyk"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </section>
+    </main>
+  </body>
+</html>
+<!DOCTYPE html>

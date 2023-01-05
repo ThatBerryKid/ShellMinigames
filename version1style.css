@@ -1,0 +1,176 @@
+/* ----- CCS programmed by JWBerry ---- */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+/* ----- BACKGROUND ----- */
+body {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+  background: rgb(24, 24, 24);
+}
+/* ----- BACKGROUND -----*/
+
+/* ----- HEADER ----- */
+header {
+  text-align: center;
+  border: 1px solid black;
+  max-width: 800px;
+  margin: 0 auto;
+  margin-top: 2%;
+  margin-bottom: 0;
+  border-radius: 20px 20px 0 0;
+  background-color: #404040;
+}
+header:hover {
+  background-color: rgb(108, 108, 108);
+}
+a#promo {
+  font-size: .9em;
+  color: #fff;
+  text-decoration: none;
+}
+a#promo:visited {
+  color: #fff;
+  text-decoration: none;
+}
+/* ----- HEADER ----- */
+
+
+/* ----- MAIN ----- */
+main {
+  width: 1000px;
+  padding-bottom: 10%;
+  margin: 0 auto;
+  border: 8px solid #0B93BD;
+  border-radius: 48px;
+  background: linear-gradient(#1c90b5, #50acca, #abe3f6, #abe3f6);
+}
+
+#pageTitle {
+  color: rgb(255, 242, 184);
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  text-align: center;
+  font-size: 3em;
+  filter: drop-shadow(2px 3px 1px black);
+}
+
+/* ----- GRID ----- */
+.container {/*This is the code for the Game Mode holder */
+  max-width: 900px;
+  margin: 0 auto;
+  width: 900px;
+  display: grid;
+  grid: repeat(4, 1fr) / 900px;
+  row-gap: 25px;
+}
+.container img{
+  width:100px;
+}
+
+.flex{
+  display: flex;
+  background: #254de4;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 25px;
+}
+
+
+
+
+/* ----- ITEMS ----- */
+.gm {
+  /*This is the code for the individual Game Mode items */
+  height: 300px;
+  width: 300px;
+  text-align: center;
+  background: url("https://media.discordapp.net/attachments/735888028379250740/971929892302237756/unknown.png");
+  background-size: cover;
+  font-weight: bold;
+  border-radius: 24px;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gm p {
+  font-size: 2em;
+  color: white;
+}
+
+.gm:hover {
+  filter: blur(0px);
+  filter: drop-shadow(5px 5px black);
+}
+.bw{
+  background: url("images/bunkerWarsSSimg.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.cb{
+  background: url("images/ChefBerrySSimg.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.bb{
+  background: url("images/11BBSSimg.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.bb:hover{
+  background-image: url(images/11BBClip1.gif);
+}
+
+
+.mac{
+  background: url("images/MidAirSSimg.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+/*.gm:nth-child(5){
+  grid-column: 2;
+  width: 300px;
+  transition: width 2s, grid-colum 2s;
+}
+.gm:nth-child(5):hover{
+  width: 600px;
+  grid-column: 2 / 4;
+}
+*/
+/* ----- ITEMS ----- */
+/*
+@media(max-width: 800px) {
+  .GMContainer{
+    max-width: 600px;
+    grid-template-columns: repeat(2,2fr);
+  }
+  .gm{
+    width: 350px;
+  }
+}
+
+@media(max-width: 680px) {
+  .GMContainer{
+    grid-template-columns: 1fr;
+    
+  }
+  .gm{
+    width: 300px;
+  }
+}
+*/
+/* ----- GRID ----- */
+/* ----- MAIN ----- */
