@@ -18,7 +18,8 @@
 
   /* Some Minigames Colors */
   --mg-bluegreen: #0B93BD;
-  --mg-main-orange: #F79520;
+  #--mg-main-orange: #F79520;
+	--mg-main-orange: #a63921;
   --mg-main-offwhite: rgb(255, 248, 248);
   --mg-colorsheme1: #fff;
 
@@ -149,7 +150,7 @@ main {
   /* filter: drop-shadow(2px 4px 3px rgb(46, 46, 46)); */
 }
 
-#button {
+.button {
   background-color: var(--mg-main-orange);
   width: 200px;
   padding: 5px;
