@@ -17,7 +17,7 @@
   --ss-blue0: #c8edf8;
   --ss-blue1: #95e2fe;
   --ss-blue2: #6498BF;
-	--ss-brown: #cd0400;
+  --ss-brown: #cd0400;
   /*--ss-blue3: #0b93bd;*/
   /*Main Color */
   --ss-blue3: #8BCAFF;
@@ -33,6 +33,7 @@
   --mg-main-offwhite: rgb(255, 248, 248);
   --mg-colorsheme1: #fff;
   --mg-main-color: var(--ss-blue3);
+  --mg-main-low: #6498BFAA; /* basically it's --ss-blue4's color, with AA at the end for some transparency */
   --mg-second-color: var(--ss-blue4);
   --mg-third-color: var(--ss-blue5);
   /*Some JW Colors */
@@ -122,6 +123,7 @@ body {
 #menu {
   background-color: #6498BF;
   padding: 0 10px;
+  padding-top: 10px;
   text-align: center;
   display: flex;
   justify-content: space-around;
@@ -186,36 +188,58 @@ main .container {
   align-items: flex-end;
   border: 2px solid var(--mg-main-color);
 }
-
 .gm:hover {
   filter: blur(0px);
   filter: drop-shadow(5px 5px var(--mg-third-color));
 }
 /* experiemental featured Minigame code */
-.featured{
-	flex: 1 1 600px;
+.featured {
+  flex: 1 1 600px;
 }
-
-/* The following is the code for the text and background explaining the image the Minigame depicts 
-Starting with defining it and it's mesaurments 
-*/
-.info {
-  background: var(--mg-main-color);
-  width: 110%;
-  height: 20%;
-  padding-top: 5%;
+/* Created a Wrapper element to handle the Text/Background elements that I want
+This holds them in place as they do their expanding animation
+Just a basic wrapper that is the full size of the parent element, so I can use it as an anchor for the element within it; in this case is the .info div */
+.wrapper {
+  min-width: 300px;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
-
-.info a {
+.wrapper a {
   text-decoration: none;
   color: var(--mg-main-offwhite);
 }
+/* The following is the code for the text and background explaining the image the Minigame depicts 
+Starting with defining it and it's mesurements
+Then defining what the anchers <a> look like
+Then defining the hover state for the anchers <a>
+Then the paragraphs.
+*/
+
+/*
+I edited the code since above I added a wrapper, so now the .info div is a part of a flex column grid.
+That way I can have the wrapper it's a part of
+be a div anchor element and can control the animation better.
+*/
+.info {
+  background-color: var(--mg-main-color);
+  width: 100%;
+  height: 20%;
+  padding-top: 5%;
+  transition: .4s;
+}
 .info:hover {
-	height: 40%;
+  background-color: var(--mg-main-low);
+  height: 40%;
+  flex-grow: .2;
+  padding-top: 10%;
+  font-size: 150%;
 }
 .info p {
   font-size: 1.4em;
   color: white;
+  height: 50px;
 }
 .bw {
   background: url("images/bunkerWarsSSimg.png");
@@ -256,6 +280,12 @@ Starting with defining it and it's mesaurments
 .red {
   background: red;
   color: black;
+}
+button {
+  background-color: var(--mg-main-color);
+  margin-top: -5px;
+  padding: 8px;
+  border: 1px solid dimgray;
 }
 /* ----- ITEMS ----- */
 @media (max-width: 760px) {
