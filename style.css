@@ -120,6 +120,7 @@ body {
 .navbar ul li {
   margin-left: 20px;
 }
+/* Context Menu */
 #menu {
   background-color: #6498BF;
   padding: 0 10px;
@@ -188,9 +189,16 @@ main .container {
   align-items: flex-end;
   border: 2px solid var(--mg-main-color);
 }
+.gm a {
+  text-decoration: none;
+  color: var(--mg-main-offwhite);
+}
 .gm:hover {
   filter: blur(0px);
   filter: drop-shadow(5px 5px var(--mg-third-color));
+}
+.gm a:hover{
+	 color: var(--mg-third-color);
 }
 /* experiemental featured Minigame code */
 .featured {
@@ -200,15 +208,11 @@ main .container {
 This holds them in place as they do their expanding animation
 Just a basic wrapper that is the full size of the parent element, so I can use it as an anchor for the element within it; in this case is the .info div */
 .wrapper {
-  min-width: 300px;
+  width: 300px;
   min-height: 300px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-}
-.wrapper a {
-  text-decoration: none;
-  color: var(--mg-main-offwhite);
 }
 /* The following is the code for the text and background explaining the image the Minigame depicts 
 Starting with defining it and it's mesurements
@@ -238,7 +242,6 @@ be a div anchor element and can control the animation better.
 }
 .info p {
   font-size: 1.4em;
-  color: white;
   height: 50px;
 }
 .bw {
