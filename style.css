@@ -99,20 +99,20 @@ body {
 }
 .navbar .container {
   display: flex;
-  justify-content: space-between;
+  justify-content:center;
   align-items: center;
   height: 100%;
   min-width: 600px;
   max-width: 1000px;
 }
 .navbar a {
-  color: white;
+  color: var(--mg-main-offcolor);
   text-decoration: none;
   font-size: 18px;
   font-weight: bold;
 }
 .navbar a:hover {
-  color: lightblue;
+  color: var(--mg-second-color);
 }
 .navbar ul {
   display: flex;
@@ -131,7 +131,14 @@ body {
 }
 #menu a {
   text-decoration: none;
-  color: #A3E0FF;
+	color: var(--mg-main-color);
+}
+#menu a:hover{
+	color: var(--mg-main-offwhite);
+}
+#menu .na{
+	text-decoration: line-through;
+	color: var(--mg-third-color);
 }
 /* ----- NAVBAR ----- */
 /* ----- MAIN ----- */
@@ -188,6 +195,8 @@ main .container {
   justify-content: center;
   align-items: flex-end;
   border: 2px solid var(--mg-main-color);
+  filter: drop-shadow(0px 0px var(--mg-third-color));
+	transition: 1.4s;
 }
 .gm a {
   text-decoration: none;
@@ -195,10 +204,10 @@ main .container {
 }
 .gm:hover {
   filter: blur(0px);
-  filter: drop-shadow(5px 5px var(--mg-third-color));
+  filter: drop-shadow(10px 10px var(--mg-third-color));
 }
 .gm a:hover{
-	 color: var(--mg-third-color);
+	 color: var(--mg-main-offwhite);
 }
 /* experiemental featured Minigame code */
 .featured {
@@ -210,6 +219,7 @@ Just a basic wrapper that is the full size of the parent element, so I can use i
 .wrapper {
   width: 300px;
   min-height: 300px;
+300px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -313,7 +323,16 @@ button {
 /* ----- FLEX ----- */
 /* ----- MAIN ----- */
 /* ----- FOOTER ----- */
-.footer {
-  grid-area: footer;
+footer{
+	color: var(--mg-main-offwhite);
+	margin: 0 auto;
+}
+footer a{
+	color: var(--mg-second-color);
+	text-decoration: none;
+}
+footer a:hover{
+	color: var(--mg-third-color);
+	
 }
 /* ----- FOOTER ----- */
