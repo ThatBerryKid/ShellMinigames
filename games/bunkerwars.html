@@ -7,73 +7,14 @@
 <link rel="stylesheet" href="../style.css" />
 <link rel="stylesheet" href="gamestyle.css" />
 <title>Shell Minigames | JWBerry3D</title>
+<!-- There are some specific stylings that happen per minigame's page. Here is the area I specify any overwrites I do 
+-->
 <style>
-* {
---main-Color: #cd0400;
-}
-#bw {
-	background-position: top center;
-	background-size: cover;
-}
-.title {
-	background: #8bcaff;
-}
-.instructions {
-	background: #8bcaff;
-}
-.streamer {
-/*	background: #703800;*/
-background: var(--mg-main-orange);
-}
-.player {
-	background: #bd640b;
-}
-.item ul {
-	list-style-type: square;
-	margin-left: 15%;
-}
-.item ol {
-	margin-left: 5%;
-}
-.video {
-	background: rgb(12, 120, 166);
-}
-#maps {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	flex-wrap: wrap;
-}
-#maps p {
-	margin: 0px;
-	padding: 0px;
-	min-width: 90px;
-	height: 60px;
-	background-position: center center;
-	background-size: cover;
-	text-align: center;
-	padding-top: 20px;
-	margin-top: 10px;
-	color: white;
-	border: white 2px solid;
-	font-size: 18px;
-}
-a.pointed {
-	text-decoration: none;
-	color: inherit;
-	pointer-events: none;
-}
-a.pointer {
-	text-decoration: none;
-	color: var(--mg-third-color);
-	background-color: inherit;
-	transition: background-color 0.4s ease;
-}
-a.pointer:hover {
-	background-color: var(--mg-second-color);
-	color: #fff;
+body {
+	background: var(--mg-third-color);
 }
 </style>
+	
 </head>
 <body>
 <div class="webpage">
@@ -82,22 +23,21 @@ a.pointer:hover {
       <div class="logo">Shell Minigames</div>
       <ul class="nav">
         <li> <a href="../index.html">Home</a> </li>
-        <li> <a href="#">Shell Shockers</a> </li>
-        <li> <a href="#">JWBerry3D</a> </li>
-        <li>
-          <input type="color" id="userCol" />
-          <button
-                type="button"
-                onclick="ChangeBG()"
-              > Change </button>
-        </li>
+        <li> <a href="#">About</a> </li>
+        <li> <a hre="https://shellshock.io" target="_blank">Shell Shockers</a> </li>
       </ul>
     </div>
   </nav>
   <main>
     <h1 id="pageTitle">Shell Minigames beta</h1>
     <div id="ss_background"></div>
-    <div id="menu"> <a href="../index.html">GO BACK</a> | <a href="#" class="na">Other Streamer Minigames</a> | <a href="https://shellshockers.fandom.com/wiki/Shell_Shockers_Wiki" target="_blank">Shell Wiki</a> </div>
+    <div id="menu"> <a href="../index.html">GO BACK</a> | <a href="#" class="na">Other Content Creator Minigames</a> | <a href="https://shellshockers.fandom.com/wiki/Shell_Shockers_Wiki" target="_blank">Shell Wiki</a> |
+      <input type="color" id="userCol" />
+      <button
+                type="button"
+                onclick="ChangeBG()"
+              > Test Change </button>
+    </div>
     <div class="mgcontainer"> 
       <!-- One long Flex box for the Game Modes -->
       <div class="item video" id="bw">
@@ -131,10 +71,14 @@ a.pointer:hover {
               title="Bunker Wars Graphic"
               alt="Bunker Wars Graphic"
             />
-        <p> In <strong>Bunker Wars</strong>, the players keep the spatula in
-          the bunker and try to get their team's points to the goal before
-          time runs out! </p>
-        <p> <a href="#howToPlay" class="pointer">HOW TO PLAY</a> | <a href="#creators" class="pointer">CREATOR TIPS</a> | <a href="#player" class="pointer">PLAYER</a> </p>
+        <p><strong>Bunker Wars</strong> is a minigame where players keep the spatula in
+          the bunker the entire match while trying to get the most points before
+          time runs out!</p>
+        <ul>
+          <li><a href="#howToPlay" class="pointer">HOW TO PLAY</a></li>
+          <li><a href="#creators" class="pointer">CREATOR TIPS</a></li>
+          <li><a href="#player" class="pointer">PLAYER TIPS</a></li>
+        </ul>
       </div>
       
       <!-- INSTRUCTIONS ON THE RIGHT SIDE -->
@@ -147,8 +91,8 @@ a.pointer:hover {
           <li> Set a score you want the team to get to, and how long the match
             will be. </li>
           <li>Boot anyone who takes the spatula outside of the bunker.</li>
-          <li> <span style="color: #fff; background-color: var(--mg-third-color)"
-                  >Whichever team gets to the goal in points first or has the
+          <li> <span style="color: var(--mg-main-offwhite); background-color: var(--mg-second-color)"
+                  >Whichever team gets their points to the limit first or has the
             higher points when the timer ends, is the winner!</span
                 > </li>
           <li>Remember to have fun!</li>
@@ -159,64 +103,82 @@ a.pointer:hover {
       <div class="item streamer"> <a href="#" id="creators" class="pointed"
               >
         <h3>Tips for Content Creators:</h3>
-        </a
-            > 
-        <!-- MAP IMAGES -->
-        <div id="maps">
-          <p
-                style="
-                  background-image: url(https://shellshock.io/maps/dirtbase.png?h5n4liypae);
-                "
-              > Dirt Base </p>
-          <p
-                style="
-                  background-image: url(https://shellshock.io/maps/jailbreak.png?1xmtq8j7ty6);
-                "
-              > Jail Break </p>
-          <p
-                style="
-                  background-image: url(https://shellshock.io/maps/mudGulch.png?13l8wfir3eo);
-                "
-              > Mud Gulch </p>
-          <p
-                style="
-                  background-image: url(https://shellshock.io/maps/road.png?b8dswsslr5);
-                "
-              > Road </p>
-          <p
-                style="
-                  background-image: url(https://shellshock.io/maps/shipyard.png?rhclzwknqx);
-                "
-              > Shipyard </p>
-          <p
-                style="
-                  background-image: url(https://shellshock.io/maps/sparta.png?285ykpexf86);
-                "
-              > Sparta </p>
-          <p
-                style="
-                  background-image: url(https://shellshock.io/maps/stage.png?233hzd10yfi);
-                "
-              > Stage </p>
-        </div>
-        
+        </a> 
         <!-- INFORMATION -->
-        <p> Suggested Maps to use: Dirt Base, Jail Break, Mud Gulch, Road, Shipyard,
-          Sparta, Stage. </p>
+        <ul>
+          <li>
+            <p class="tip">Here are some suggested maps to play on:</p>
+            <!-- MAP IMAGES -->
+            <div id="maps">
+              <p id="dirtBase"> Dirt Base </p>
+              <p id="jailbreak"> Jail Break </p>
+              <p id="mudgulch"> Mud Gulch </p>
+              <p id="road"> Road </p>
+              <p id="shipyard"> Shipyard </p>
+              <p id="sparta"> Sparta </p>
+              <p id="stage"> Stage </p>
+            </div>
+          </li>
+          <li>
+            <p class="tip">If you play this on <a href="https://www.twitch.tv/directory/game/Shell%20Shockers" target="_blank">Twitch</a>, having a <strong>Channel Points Prediction</strong> for the viewers to participate in will add some fun!</p>
+          </li>
+          <li>
+            <p class="tip"><strong>7 minutes</strong> is the recommended time limit for each round of Bunker Wars. (9 minutes is a good amount as well, and 12 minutes if you're feeling comfortable or that the rounds are going too quickly)</p>
+          </li>
+          <li>
+            <p class="tip">If you have a timer, displaying it as a <strong>timer overlay</strong> on screen is helpful for the viewers to keep track of close finishes! (in Twitch clips, or rewinding on <a href="https://www.youtube.com/channel/UCufekKl4-pD2u47JAzZ6xrA" target="_blank">YouTube</a>)</p>
+          </li>
+          <li>
+            <p class="tip"><strong>Kick out those who don't listen</strong>. The game only works if people listen! They can always join back in the next rounds if they want to play along!</p>
+          </li>
+          <li>
+            <p class="tip">Try to get an <strong>even number for the teams</strong> (ex 2v2, 4v4, 8v8 - including you). It's best to not start until the teams are balanced. But if you just can't get enough people to balance the teams out, it's fine, I've been there too.</p>
+          </li>
+          <li>
+            <p class="tip">If you plan to watch the action happen the whole time, or record a <a href="https://youtu.be/-V1ZXCyZFbA" target="_blank">Bunker Wars event</a> between your viewers/players, join spectator mode and make sure the teams are an even number without you. </p>
+          </li>
+          <li>
+            <p class="tip"><em>A cool idea for an event/YouTube video is hosting a 4v4 Bunker Wars with 2 or more spectators recording other point-of-view shots</em></p>
+          </li>
+          <li>
+            <p class="tip"><strong>Have fun!</strong> If it feels like it will be too much work for your viewers instead of play, <br />
+              <a href="../index.html">try a different minigame to play!</a></p>
+          </li>
+        </ul>
       </div>
       
-      <!-- SUGGESTIONS FOR playerS -->
+      <!-- SUGGESTIONS FOR PLAYERS -->
       <div class="item player"> <a href="#" id="player" class="pointed"
               >
         <h3>Tips to play with friends!</h3>
         </a
-            > </div>
+            >
+        <ul>
+          <li>
+            <p class="tip">Try to get as many friends to play! The more, the better! </p>
+          </li>
+          <li>
+            <p class="tip">Join into a group call via <a href="https://support.discord.com/hc/en-us/articles/223657667-Group-Chat-and-Calls">Discord</a>, or <a href="https://chat.google.com
+">Google Chats</a>, to meet up and easily communicate with the players on the points, rules, and timer if you use one.</p>
+          </li>
+          <li>
+            <p class="tip"><strong>Kick out those who don't listen</strong>. The game only works if people listen! They can always join back in the next rounds if they want to play along!</p>
+          </li>
+          <li>
+            <p class="tip"><strong>7 minutes</strong> is the recommended time limit for each round of Bunker Wars. (9 minutes is a good amount as well, and 12 minutes if you're feeling comfortable or that the rounds are going too quickly)</p>
+          </li>
+          <li>
+            <p class="tip"><strong>Have fun!</strong> If it feels like it will be too much work instead of play, <br />
+              <a href="../index.html">try a different minigame to play!</a></p>
+          </li>
+        </ul>
+      </div>
     </div>
     <center>
       <div><a class="pointer" href="#">Back TO TOP </a></div>
     </center>
   </main>
-  <footer>JWBerry3D</footer>
+  <footer>JWBerry3D | <a href="https://twitch.tv/JWBerry3D" target="_blank">Twitch<a/> | <a href="https://youtube.com/@JWBerry3D" target="_blank">YouTube</a></footer>
 </div>
 <script>
       function ChangeBG() {

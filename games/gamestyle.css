@@ -1,5 +1,4 @@
 /* ----- Style options for the Mini Games themselves ----- */
-
 main .mgcontainer {
   display: grid;
   grid-template-areas:
@@ -8,51 +7,159 @@ main .mgcontainer {
     "streamer player";
   grid-template-columns: 2fr 1fr;
 }
-
 .item {
-  height: 300px;
+  min-height: 300px;
   padding: 20px 15px;
 }
 .video {
   grid-area: video;
   height: 600px;
   height: 100%;
+  background: var(--mg-second-color);
 }
 .title {
   grid-area: title;
   height: 100%;
-}
-.title h2 {
-  color: rgb(37);
-}
-p {
-  color: rgb(48);
+  background: var(--mg-second-color);
 }
 .instructions {
   grid-area: instructions;
   padding: 15px;
   height: 100%;
+  background: var(--mg-main-color);
 }
 .streamer {
   grid-area: streamer;
+  background: var(--mg-main-purple);
 }
 .player {
   grid-area: player;
 }
+.title ul {
+	list-style-type: square;
+	margin-left: 15%;
+}
+.item ol {
+	margin-left: 5%;
+}
 
+li {
+	margin-top: 5%;
+}
+ul {
+	list-style: none;
+}
 img {
   pointer-events: none;
+}
+/* This is the code that defines ALL of the code for the paragraphs that are tips to the players */
+p.tip {
+	margin: 20px 0;
+	padding-top: 5px;
+	border-top: 8px dashed rgba(0,0,0,0.1);
+}
+p.tip:hover {
+	background: var(--mg-main-color);
+}
+/* with this next part, I define the qualities for ALL of the anchor (a) elements within the paragraph tips */
+p.tip a {
+	border: 2px solid;
+	text-decoration: none;
+	border-radius: 5px;
+	padding: 2px;
+	transition: background-color .4s ease;
+	color: var(--mg-main-offwhite);
+}
+/* Now I split up the paragraph anchor (a) elements by STREAMER and PLAYER parent elements */
+/*STREAMER ANCHOR (A) */
+.streamer p.tip a {
+	border-color: #5729A0;
+	background-color: #9D34E3;
+}
+.streamer p.tip a:hover {
+	background-color: #5729A0;
+}
+/*PLAYER ANCHOR (A) */
+.player p.tip a {
+	color: var(--mg-main-offwhite);
+	background: var(--mg-main-color);
+	border-color: var(--mg-second-color);
+}
+.player p.tip a:hover {
+	background: var(--mg-second-color);
+}
+/*This part is where I define the attributes for links that point to information and are pointed links (other ancher (a) elements that have been linked to) */
+a.pointed {
+	text-decoration: none;
+	color: inherit;
+	pointer-events: none;
+}
+a.pointer {
+	text-decoration: none;
+	color: var(--mg-main-offwhite);
+	background-color: var(--mg-third-color);
+	border: 2px solid var(--mg-third-color);
+	border-radius: 5px;
+	padding: 2px;
+	transition: background-color .4s ease;
+}
+a.pointer:hover {
+	background-color: var(--mg-second-color);
+}
+/* This is the code to make the Map sqaure icons */
+#maps {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+#maps p {
+	margin: 0px;
+	padding: 0px;
+	min-width: 90px;
+	height: 60px;
+	background-position: center center;
+	background-size: cover;
+	text-align: center;
+	padding-top: 20px;
+	margin-top: 10px;
+	color: white;
+	border: white 2px solid;
+	font-size: 18px;
+}
+/*
+ALL MAPS AND THEIR IMAGE LINKS
+*/
+p#dirtBase{
+	background-image: url(https://shellshock.io/maps/dirtbase.png?h5n4liypae);
+}
+p#jailbreak{
+	background-image: url(https://shellshock.io/maps/jailbreak.png?1xmtq8j7ty6);
+}
+p#mudgulch{
+	background-image: url(https://shellshock.io/maps/mudGulch.png?13l8wfir3eo);
+}
+p#road{
+	background-image: url(https://shellshock.io/maps/road.png?b8dswsslr5);
+}
+p#shipyard{
+	background-image: url(https://shellshock.io/maps/shipyard.png?rhclzwknqx);
+}
+p#sparta{
+	background-image: url(https://shellshock.io/maps/sparta.png?285ykpexf86);
+}
+p#stage{
+	background-image: url(https://shellshock.io/maps/stage.png?233hzd10yfi);
 }
 button {
   height: 30px;
 }
-
 @media (max-width: 760px) {
   main .mgcontainer {
     display: grid;
     grid-template-areas:
       "title"
-      "instructions" "streamer" "player" "video";
+      "instructions""streamer""player""video";
     grid-template-columns: 1fr;
   }
   .item {

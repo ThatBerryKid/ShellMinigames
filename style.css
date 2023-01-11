@@ -25,14 +25,12 @@
   --ss-blue4: #6498BF;
   /*Third darkest color */
   --ss-blue5: #035770;
-  --ss-shellbackground: linear-gradient(var(--mg-bluegreen), #abe3f6);
+  --ss-shellbackground: linear-gradient(var(--mg-main-color), #abe3f6);
   /* Some Minigames Colors */
-  --mg-bluegreen: #8BCAFF;
-  /*--mg-main-orange: #F79520;*/
   --mg-main-orange: #e6a35c;
   --mg-main-offwhite: rgb(255, 248, 248);
-  --mg-colorsheme1: #fff;
-  --mg-main-color: var(--ss-blue3);
+	--mg-main-purple:#BF8CFF; 
+	--mg-main-color: var(--ss-blue3);
   --mg-main-low: #6498BFAA; /* basically it's --ss-blue4's color, with AA at the end for some transparency */
   --mg-second-color: var(--ss-blue4);
   --mg-third-color: var(--ss-blue5);
@@ -53,7 +51,7 @@ h1, h2, h3 {
   list-style-type: none;
 }
 html {
-  background: var(--mg-bluegreen);
+  background: var(--mg-main-color);
 }
 body {
   font-family: "Poppins", sans-serif;
@@ -87,7 +85,7 @@ body {
 /* ----- NAVBAR ----- */
 .navbar {
   grid-area: navbar;
-  background: var(--mg-bluegreen);
+  background: var(--mg-main-color);
   color: #fff;
   /* position: fixed; */
   /* width: 100vw; */
@@ -103,7 +101,7 @@ body {
 .navbar .container {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items:center;
   height: 100%;
   min-width: 600px;
   max-width: 1000px;
@@ -193,6 +191,7 @@ main .container {
   height: 300px;
   text-align: center;
   background: url("https://media.discordapp.net/attachments/735888028379250740/971929892302237756/unknown.png");
+	background-repeat: no-repeat;
   font-weight: bold;
   display: flex;
   justify-content: center;
