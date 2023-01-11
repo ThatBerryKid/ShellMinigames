@@ -75,7 +75,10 @@ body {
 /* ----- GRID ------ */
 .webpage {
   display: grid;
-  grid-template-areas: "navbar""content""footer";
+  grid-template-areas: 
+	  "navbar"
+	  "content"
+	  "footer";
   grid-template-columns: 1fr;
   grid-template-rows: 0.02fr 1fr 40px;
   gap: 5px;
@@ -99,7 +102,7 @@ body {
 }
 .navbar .container {
   display: flex;
-  justify-content:center;
+  justify-content: space-between;
   align-items: center;
   height: 100%;
   min-width: 600px;
@@ -131,14 +134,14 @@ body {
 }
 #menu a {
   text-decoration: none;
-	color: var(--mg-main-color);
+  color: var(--mg-main-color);
 }
-#menu a:hover{
-	color: var(--mg-main-offwhite);
+#menu a:hover {
+  color: var(--mg-main-offwhite);
 }
-#menu .na{
-	text-decoration: line-through;
-	color: var(--mg-third-color);
+#menu .na {
+  text-decoration: line-through;
+  color: var(--mg-third-color);
 }
 /* ----- NAVBAR ----- */
 /* ----- MAIN ----- */
@@ -196,7 +199,7 @@ main .container {
   align-items: flex-end;
   border: 2px solid var(--mg-main-color);
   filter: drop-shadow(0px 0px var(--mg-third-color));
-	transition: 1.4s;
+  transition: 1.4s;
 }
 .gm a {
   text-decoration: none;
@@ -206,8 +209,8 @@ main .container {
   filter: blur(0px);
   filter: drop-shadow(10px 10px var(--mg-third-color));
 }
-.gm a:hover{
-	 color: var(--mg-main-offwhite);
+.gm a:hover {
+  color: var(--mg-main-offwhite);
 }
 /* experiemental featured Minigame code */
 .featured {
@@ -217,9 +220,8 @@ main .container {
 This holds them in place as they do their expanding animation
 Just a basic wrapper that is the full size of the parent element, so I can use it as an anchor for the element within it; in this case is the .info div */
 .wrapper {
-  width: 300px;
-  min-height: 300px;
-300px;
+  width: 100%;
+  height: 300px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -230,7 +232,6 @@ Then defining what the anchers <a> look like
 Then defining the hover state for the anchers <a>
 Then the paragraphs.
 */
-
 /*
 I edited the code since above I added a wrapper, so now the .info div is a part of a flex column grid.
 That way I can have the wrapper it's a part of
@@ -238,7 +239,7 @@ be a div anchor element and can control the animation better.
 */
 .info {
   background-color: var(--mg-main-color);
-  width: 100%;
+  width: 300px;
   height: 20%;
   padding-top: 5%;
   transition: .4s;
@@ -323,16 +324,15 @@ button {
 /* ----- FLEX ----- */
 /* ----- MAIN ----- */
 /* ----- FOOTER ----- */
-footer{
-	color: var(--mg-main-offwhite);
-	margin: 0 auto;
+footer {
+  color: var(--mg-main-offwhite);
+  margin: 0 auto;
 }
-footer a{
-	color: var(--mg-second-color);
-	text-decoration: none;
+footer a {
+  color: var(--mg-second-color);
+  text-decoration: none;
 }
-footer a:hover{
-	color: var(--mg-third-color);
-	
+footer a:hover {
+  color: var(--mg-third-color);
 }
 /* ----- FOOTER ----- */
